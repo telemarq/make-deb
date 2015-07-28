@@ -5,7 +5,7 @@ Make-deb is a simple tool that generates Debian configuration based on your setu
 
 .. code-block:: bash
 
-   $ cd /my/python/repository
+   $ cd /my/python/repository # must be a git repository with at least one commit
    $ make-deb
 
    'debian' directory successfully placed at the root of your repository
