@@ -8,7 +8,11 @@ from make_deb import DebianConfiguration, DebianConfigurationException
 
 def main():
     try:
-        debconf = DebianConfiguration(os.getcwd())
+        if len(sys.argv) > 1:
+            arch = sys.argv[1]
+        else:
+            arch = None
+        debconf = DebianConfiguration(os.getcwd(), arch=arch)
         debconf.render()
     except DebianConfigurationException as e:
         print e
